@@ -20,7 +20,7 @@ public class MyView {
     }
 
     public void render(Map<String, Object> model, HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        modelToRequestAttribute(model, request); //Map 루프 -> request 값을 담아둠
+        modelToRequestAttribute(model, request); //Map 루프 -> model에 request 값을 담아둠
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);//컨트롤러 -> 뷰
         dispatcher.forward(request, response);// 다른 서블릿이나 JSP 이동할수 있는 기능
     }
