@@ -31,8 +31,7 @@ public class RequestHeaderServlet extends HttpServlet {
         // /request-header
         System.out.println("request.getRequestURI() = " + request.getRequestURI());
         //username=hi
-        System.out.println("request.getQueryString() = " +
-                request.getQueryString());
+        System.out.println("request.getQueryString() = " + request.getQueryString());
         System.out.println("request.isSecure() = " + request.isSecure()); //https 사용 유무
         System.out.println("--- REQUEST-LINE - end ---");
         System.out.println();

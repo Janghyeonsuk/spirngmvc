@@ -8,7 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
- * ※ GET 쿼리 파라미터
+ * ※ GET 방식 쿼리 파라미터
+ * ※ POST 방식 -> hello-form.html
+ *
  * 1. 파라미터 전송 기능
  * http://localhost:8080/request-param?username=hello&age=20
  *
@@ -36,7 +38,7 @@ public class RequestParamServlet extends HttpServlet {
 
         System.out.println("[단일 파라미터 조회] - start");
         String username = request.getParameter("username");
-        String age = request.getParameter("age");
+        int age = Integer.parseInt(request.getParameter("age"));
 
         System.out.println("username = " + username);
         System.out.println("age = " + age);
